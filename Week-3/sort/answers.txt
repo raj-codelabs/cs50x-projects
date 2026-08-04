@@ -1,0 +1,14 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because it is extremely fast on already sorted input
+but much slower on random and reversed input.
+
+sort2 uses: Merge Sort
+
+How do you know?: Because its running time is nearly the same for sorted, random,
+and reversed inputs and scales much better for larger input sizes.
+
+sort3 uses: Selection Sort
+
+How do you know?: Because its running time is similar regardless of
+whether the input is sorted, random, or reversed, which matches the behavior of Selection Sort.

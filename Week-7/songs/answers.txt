@@ -1,0 +1,15 @@
++----------------+-----------------+----------------------+
+| average_energy | average_valence | average_danceability |
++----------------+-----------------+----------------------+
+| 0.65906        | 0.484443        | 0.71646              |
++----------------+-----------------+----------------------+
+Bassed on the averages, I would characterize their audio aura
+as energetic and danceability. THe songs have high energy and
+danceability, while the average valence suggest its neither
+very hapy nor very sad.
+
+Hoever, this calculation is not very representative of the
+listener because it only uses the averages of three features.
+I would propose that a better approach would be to include other
+audi features and give more weight to songs that the listener
+listen to most.

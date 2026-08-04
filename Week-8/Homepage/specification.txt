@@ -1,0 +1,59 @@
+PROJECT SPECIFICATION
+My Personal Homepage
+
+1. What this is?
+A personal portfolio site. I'm a first-year B.Tech CSE student (AI/Ml)
+and this a simple multi-page site where people can see who I am, what I'm learning,
+what I've built so far and a way to reach me.
+
+2. Pages
+
+2.1 Home (index.html)
+
+Title: Raj's Homepage
+Quick intro - B.Tech CSE (AI/ML) student
+"Say hello" button
+Greeting that changes with the time of day (Morning/Afternoon/Evening)
+Nav links to everything else
+
+2.2 About (about.html)
+
+More on my background and specialization
+How I like learning by building small things
+Topics I'm working on through right now: Python, C HTML/CSS/JS, AI basics
+
+2.3 Projects (projects.html)
+
+Personal Homepage — this site, practice with layout/structure
+Dragon Battle — a Scratch game I made for CS50x
+C Programming Practice — small logic-building programs
+
+2.4 Contact (contact.html)
+
+Name, Email, Message fields
+Rely on browser validation (empty fields)
+No page reload on submit
+On submit: alert confirming their name, then clear the form
+
+3. Shared across pages
+
+Same navbar/footer everywhere
+Highlight whichever page is active in the nav
+Responsive via Bootstrap 5 — desktop and mobile
+Clean spacing, readable text, decent contrast
+
+4. Stack
+
+HTML5 — structure
+CSS3 (style.css) — styling
+JavaScript (script.js) — greeting logic, clock, form handling
+Bootstrap 5 — nav, grid, layout
+
+Files:
+-index.html
+-about.html
+-projects.html
+-contact.html
+-style.css
+-script.js
+-specification.txt

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function()
+            {
+                // multiple choice
+                let correct = document.querySelector(".correct")
+                let incorrect = document.querySelectorAll(".incorrect")
+                correct.addEventListener("click", function()
+                {
+                    correct.style.backgroundColor="green";
+                    document.querySelector("#mc-result").innerHTML="Correct";
+                });
+
+                for (let i =0; i < incorrect.length; i++)
+                {
+                    incorrect[i].addEventListener("click", function()
+                    {
+                        incorrect[i].style.backgroundColor="red";
+                        document.querySelector("#mc-result").innerHTML="Incorrect";
+                    });
+                }
+
+                // free response
+                document.querySelector("#check").addEventListener("click", function ()
+                {
+
+                    let input = document.querySelector("#answer");
+
+                    if (input.value.trim().toLowerCase() === "tokyo")
+                    {
+                        input.style.backgroundColor = "lightgreen";
+                        document.querySelector("#fr-result").innerHTML = "Correct!";
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = "salmon";
+                        document.querySelector("#fr-result").innerHTML = "Incorrect";
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Multiple Choice Question -->
+                 <h3>
+                    Which of the following Pokémon was Ash Ketchum's first official catch in the Pokémon anime series?
+                 </h3>
+                 <button class="incorrect">Pikachu</button>
+                 <button class="correct">Caterpie</button>
+                 <button class="incorrect">Pidgeotte</button>
+                 <button class="incorrect">Charmander</button>
+                 <p id="mc-result"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Free Response Question -->
+                 <h3>
+                    What is the capital of Japan?
+                 </h3>
+                 <input type="text" id="answer" placeholder="Your answer" autocomplete="off">
+                 <button id="check">Check Answer</button>
+                 <p id="fr-result"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.nav{
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav a{
+    color: #fff;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 20px;
+    margin: 14px 0;
+}
+
+h2{
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.hero{
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.intro-badge{
+    display: inline-block;
+    background: #e0e8ff;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.btn{
+    display: inline-block;
+    padding: 8px 12px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+form{
+    display: grid;
+    gap: 8px;
+    max-width: 600px;
+}
+
+input, textarea{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.project{
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.footer{
+    text-align: center;
+    padding: 16px;
+    background: #f7f7f7;
+    margin-top: 24px;
+}
