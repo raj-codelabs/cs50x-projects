@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Summary - AI Study Notes Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>Your Summary</h1>
+            <p class="subtitle">
+                A concise, revision-ready summary of your notes.
+                {{ word_count }} words generated.
+            </p>
+        </header>
+
+        <section class="card">
+            <div class="summary-text" id="summary">{{ summary }}</div>
+        </section>
+
+        <div class="actions">
+            <a class="btn-primary"
+               href="{{ url_for('download') }}">Download summary.txt</a>
+            <form action="{{ url_for('clear') }}" method="post"
+                  class="inline-form">
+                <button type="submit" class="btn-secondary">Start Over</button>
+            </form>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

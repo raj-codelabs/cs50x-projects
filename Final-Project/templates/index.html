@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Notes Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>AI Study Notes Summarizer</h1>
+            <p class="subtitle">
+                Turn lengthy study notes into concise, well-structured
+                revision notes with a single click.
+            </p>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="messages">
+                    {% for category, message in messages %}
+                        <p class="alert alert-{{ category }}" role="alert">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('summarize') }}" method="post"
+              enctype="multipart/form-data" class="card" id="summary-form">
+            <section class="field-group">
+                <h2>Your study notes</h2>
+                <label for="notes">Paste your notes below</label>
+                <textarea id="notes" name="notes" rows="12"
+                          maxlength="{{ max_length }}"
+                          aria-describedby="char-count notes-error"
+                          placeholder="Paste your study notes here..."></textarea>
+                <p id="char-count" class="hint">0 / {{ "{:,}".format(max_length) }} characters</p>
+                <p id="notes-error" class="hint error-hint" role="alert" hidden>
+                    Please enter some study notes or upload a .txt file.
+                </p>
+
+                <div class="divider">or</div>
+
+                <label class="file-label" for="notes_file">
+                    Upload a .txt file
+                    <input type="file" id="notes_file" name="notes_file"
+                           accept=".txt">
+                </label>
+                <p id="file-name" class="hint">No file selected</p>
+            </section>
+
+            <section class="field-group">
+                <h2>AI settings</h2>
+
+                <label for="provider">AI provider</label>
+                <select id="provider" name="provider">
+                    {% for provider in providers %}
+                        <option value="{{ provider.id }}">{{ provider.label }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="api_key">Your API key</label>
+                <input type="password" id="api_key" name="api_key"
+                       placeholder="Paste your API key here"
+                       autocomplete="off">
+
+                <fieldset class="length-group">
+                    <legend>Summary length</legend>
+                    {% for length in lengths %}
+                        <label class="radio-option">
+                            <input type="radio" name="length"
+                                   value="{{ length.id }}"
+                                   {% if length.id == 'medium' %}checked{% endif %}>
+                            {{ length.label }}
+                        </label>
+                    {% endfor %}
+                </fieldset>
+            </section>
+
+            <button type="submit" class="btn-primary" id="submit-btn">
+                <span class="spinner" aria-hidden="true"></span>
+                <span id="submit-label">Generate Summary</span>
+            </button>
+        </form>
+
+        <p class="note">
+            Your API key is used only for this single request and is never
+            stored or logged by this application.
+        </p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

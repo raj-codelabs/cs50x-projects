@@ -1,14 +1,14 @@
 # CS50x Projects
 
-A collection of programming projects that apply core computer science concepts, from C and algorithms to Python, SQL, and web development.
+This is my collection of programming projects from CS50x, applying core computer science concepts — from C and algorithms to Python, SQL, and web development.
 
 ---
 
 ## Features
 
 - Weekly projects organized by topic, covering C, algorithms, data structures, memory, Python, SQL, and web development.
-- Practical programs including a Scratch game, ciphers, voting simulations, file-processing tools, and web applications.
-- Self-contained examples that demonstrate one concept at a time.
+- Practical programs I built along the way, including a Scratch game, ciphers, voting simulations, file-processing tools, and web applications.
+- Self-contained examples, each focused on demonstrating one concept at a time.
 
 ---
 
@@ -33,8 +33,8 @@ cs50x-projects/
 
 ## Notes
 
-- Each week's README describes the projects inside it, including requirements and usage instructions.
-- This repository is intended for educational purposes.
+- Each week has its own README describing the projects inside it, along with requirements and usage instructions.
+- I put this repository together mainly to track my own progress through the course, so it's meant for educational purposes.
 
 ---
 
