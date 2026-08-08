@@ -2,7 +2,7 @@
 
 **Author:** Raj Golder ([raj-codelabs](https://github.com/raj-codelabs) on GitHub, `rajgolder` on edX)
 
-#### Video Demo: <URL>
+#### Video Demo: https://youtu.be/cSR-vhMtHsI
 
 #### Description:
 
